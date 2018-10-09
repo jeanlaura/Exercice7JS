@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>EXERCICE FIVE</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body id="exercice7">
+    <div class="container-fluid">
+      <h1>EXERCICE 7 : ATTENTION ADDITION MULTIPLCATION? C'EST BI COMPLIQU&Eacute; TOUT &Ccedil;A !</h1>
+      <form name="form7" action="" onsubmit="return validateForm()" method="post">
+        <label for="shoeSize">Pointure : </label><input type="text" id="shoeSize" name="shoeSize"/><br/>
+        <label for="yearOfBirth">Année de naissance : </label><input type="text" id="yearOfBirth" name="yearOfBirth"/><br/>
+        <input type="submit" name="submit" id="submit" value="Valider"></input>
+      </form>
+    </div>
+    <script type="text/javascript">
+      function validateForm() {
+        var shoeSize1 = document.forms["form7"]["shoeSize"].value;
+        var yearOfBirth1 = document.forms["form7"]["yearOfBirth"].value;
+        var shoeSize2 = shoeSize1*2;
+        var shoeSize3 = shoeSize2+5;
+        var shoeSize4 = shoeSize3*50;
+        var shoeSize5 = shoeSize4-yearOfBirth1;
+        var result = shoeSize5+1766;
+        var regex = /[0-9]/ ;
+        if (!regex.test(shoeSize1)||shoeSize1 == ""||isNaN(shoeSize1)) {
+          alert('Erreur dans la pointure !');
+        }else if (!regex.test(yearOfBirth1)||yearOfBirth1 == ""||isNaN(yearOfBirth1)) {
+          alert('Erreur dans l\'année de naissance !');
+        }else{
+            alert('Résultat : '+result);
+        };
+      }
+    </script>
+  </body>
+</html>
